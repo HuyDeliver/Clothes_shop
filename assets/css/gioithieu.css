@@ -1,0 +1,53 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-color: #232323;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.content_hr {
+    height: 0.5px;
+    background-color: black;
+    border: none;
+    margin-bottom: 40px;
+}
+
+#content {
+    margin: 20px auto;
+    max-width: 1180px;
+    width: 100%;
+}
+
+#content h2 {
+    font-size: 1.8rem;
+    color: var(--black-color);
+    font-weight: 400;
+    margin-bottom: 26px;
+}
+
+#content h3 {
+    font-size: 1.2rem;
+    color: var(--black-color);
+    margin-bottom: 16px;
+}
+
+#content .suggest {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #363636;
+}
+
+#content p {
+    font-size: 1.1rem;
+    color: #363636;
+    margin-bottom: 16px;
+}

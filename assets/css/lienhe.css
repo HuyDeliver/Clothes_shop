@@ -1,0 +1,126 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-color: #232323;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+#content {
+    margin: 20px auto;
+    max-width: 1180px;
+    width: 100%;
+}
+
+.content_hr {
+    height: 0.5px;
+    background-color: #cccc;
+    margin-bottom: 44px;
+    margin-top: 20px;
+    border: none;
+}
+
+#content h2 {
+    color: var(--black-color);
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+
+.content_map iframe {
+    width: 100%;
+}
+
+.content_message {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 68px;
+    margin: 40px 0;
+}
+
+.form_action h3 {
+    font-size: 1.8rem;
+    font-weight: 450;
+    margin-bottom: 16px;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 18px;
+}
+
+.form_control label {
+    font-size: 1.2rem;
+    color: #232323;
+    font-weight: 600;
+}
+
+.form_control input {
+    line-height: 40px;
+    outline: none;
+    padding: 0 20px;
+    font-size: 1.4rem;
+    border: 1px solid #c8c8c8;
+}
+
+.form_control textarea {
+    line-height: 70px;
+    resize: none;
+    padding: 0 20px;
+    outline: none;
+    font-size: 1.4rem;
+    border: 1px solid #c8c8c8;
+}
+
+.form_action input[type="submit"] {
+    font-size: 1.5rem;
+    color: #ffff;
+    background-color: var(--black-color);
+    padding: 13px 41px;
+    font-weight: 600;
+    margin-top: 19px;
+    transition: all 0.3s;
+    border: 1px solid #232323;
+}
+
+.form_action input[type="submit"]:hover {
+    color: var(--black-color);
+    background-color: #ffff;
+}
+
+.content-contact h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #041721;
+    margin-bottom: 20px;
+}
+
+.content-contact li {
+    list-style-type: none;
+    font-size: 1.3rem;
+    color: #363636;
+    margin-bottom: 16px;
+}
+
+.content-contact li a {
+    text-decoration: none;
+    color: #363636;
+}
+
+.content-contact li a:hover {
+    color: #E95144;
+}
+
+.content-contact .icon_footer {
+    margin-right: 14px;
+}

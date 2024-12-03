@@ -1,0 +1,137 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-color: #232323;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+#content {
+    margin: 20px auto;
+    max-width: 1180px;
+    width: 100%;
+}
+
+.content_hr {
+    height: 0.5px;
+    background-color: #cccc;
+    margin-bottom: 50px;
+    border: none;
+}
+
+.content_heading {
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 28px;
+}
+
+.content_main {
+    display: grid;
+    grid-template-columns: 278px auto;
+    gap: 54px;
+}
+
+.content_aside .sub_heading {
+    font-size: 1.4rem;
+    border: 2px solid #363636;
+    outline: none;
+    line-height: 40px;
+    padding: 3px 15px;
+    text-decoration: none;
+}
+
+.content_aside .sub_heading a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--black-color);
+}
+
+.content_aside .sub_heading a:hover {
+    color: #E95144;
+}
+
+.content_index {
+    margin: 22px 0;
+}
+
+.content_index a {
+    text-decoration: none;
+    color: #575454;
+}
+
+.content_index a:hover {
+    color: var(--black-color);
+}
+
+.content_index p,
+.content_index .content_sub {
+    font-size: 1.1rem;
+    color: #575454;
+    margin-bottom: 15px;
+}
+
+.content_aside img {
+    margin-top: 30px;
+}
+
+.blog_detail {
+    margin-bottom: 18px;
+}
+
+.blog_describe {
+    margin-top: 16px;
+    margin-bottom: 18px;
+}
+
+.blog_describe a {
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: var(--black-color);
+}
+
+.blog_describe a:hover {
+    color: #E95144;
+}
+
+.blog_describe p {
+    font-size: 1.2rem;
+    color: #7D7D7D;
+}
+
+.blog_describe h3,
+.blog_describe p {
+    margin-bottom: 16px;
+}
+
+.blog_readmore a {
+    max-width: 130px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--black-color);
+    border: 0.5px solid var(--black-color);
+    text-decoration: none;
+    color: #FFFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 27px;
+}
+
+.blog_readmore a:hover {
+    color: var(--black-color);
+    background-color: #FFFF;
+}
+
+.blog_hr {
+    height: 0.5px;
+    background-color: #cccc;
+    margin-bottom: 20px;
+    border: none;
+}
