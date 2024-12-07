@@ -2,5 +2,5 @@
 session_start();
 session_unset(); // Xóa tất cả các biến session
 session_destroy(); // Hủy session
-header('Location: /clothes_shop/trangchu.php');
+header('Location: ../modules/view/trangchu.php');
 exit();

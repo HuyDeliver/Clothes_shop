@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             } elseif ($role == 0) { // Tài khoản người dùng
                 echo "<script>alert('Bạn đã đăng nhập thành công!');</script>";
-                header('Location: /clothes_shop/trangchu.php');
+                header('Location: ../modules/view/trangchu.php');
+                // include './clothes_shop/modules/view/trangchu.php';
                 exit();
             }
         }
@@ -35,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../clothes_shop/assets/font/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/css/login.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="../modules/assets/font/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../modules/assets/css/login.css?v=<?= time(); ?>">
     <style>
 
     </style>
@@ -84,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const $$ = document.querySelectorAll.bind(document);
         const cancelBtn = $('.cancelbtn');
         cancelBtn.onclick = function() {
-            window.location.href = '/clothes_shop/trangchu.php';
+            window.location.href = '/clothes_shop/modules/view/trangchu.php';
         }
     </script>
 

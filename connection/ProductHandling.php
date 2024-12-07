@@ -54,14 +54,61 @@ function addsp($iddm, $name, $price, $sale, $img)
     $stmt->bindParam(':sale', $sale);
     $stmt->execute();
 }
-
-
-function getAll_prod()
+function get_prodmain($iddm = 0, $kyw = "")
 {
     $conn = connectDTB();
-    $stmt = $conn->prepare("SELECT * FROM product");
+    $sql = "SELECT * FROM product WHERE 1 ";
+    if ($iddm > 0) $sql .= " AND id_catalog=" . $iddm;
+    if ($kyw != "") $sql .= " AND  name= like '%" . $kyw . "%'";
+    $sql .= " order by id ASC ";
+    $sql .= "LIMIT 8";
+    $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $kq = $stmt->fetchAll();
     return $kq;
+}
+function getAll_prod($iddm = 0, $kyw = "")
+{
+    $conn = connectDTB();
+    $sql = "SELECT * FROM product WHERE 1 ";
+    if ($iddm > 0) $sql .= " AND id_catalog=" . $iddm;
+    if ($kyw != "") $sql .= " AND  name= like '%" . $kyw . "%'";
+    $sql .= " order by id DESC ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $kq = $stmt->fetchAll();
+    return $kq;
+}
+function show_pro($ds)
+{
+    foreach ($ds as $sp) {
+        if ($sp['price'] == 0) {
+            $gia = "Đang cập nhập";
+        } else {
+            if ($sp['sale'] > 0) {
+                $gia = '<span class="product_cost">' . $sp['price'] . '</span>
+                    <span class="produc_cost-sale">' . $sp['sale'] . '</span>';
+            } else {
+                $gia = '<span class="product_cost">' . $sp['price'] . '</span>';
+            }
+        }
+
+        echo '<div class="content_product">
+                <div class="product_item">
+                    <img src="/clothes_shop/admin/' . $sp['img'] . '" alt="" class="product_image">
+                    <div class="product_select">
+                        <div class="product_buy">
+                            <i class="icon_cart fa fa-cart-plus" aria-hidden="true"></i>
+                            <span class="product_cart">giỏ hàng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_info">
+                    <p class="product_name"><a href="">' . $sp['name'] . '</a></p>
+                    ' . $gia . '
+                </div>
+            </div>';
+    }
 }
