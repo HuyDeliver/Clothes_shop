@@ -1,7 +1,3 @@
-<div id="header_insert">
-    <?php include '../includes/header.php'; ?>
-</div>
-
 <div id="content">
     <hr class="content_hr">
     <h2 class="content_heading">TIN TỨC</h2>
@@ -34,12 +30,12 @@
                 <hr>
             </div>
 
-            <img src="../assets/image/quảng cáo 1.webp" alt="">
-            <img src="../assets/image/quảng cáo 2.webp" alt="">
+            <img src="/clothes_shop/modules/assets/image/quảng cáo 1.webp" alt="">
+            <img src="/clothes_shop/modules/assets/image/quảng cáo 2.webp" alt="">
         </div>
         <div class="content_blog">
             <div class="blog_detail">
-                <img src="../assets/image/blog 1.webp" alt="">
+                <img src="/clothes_shop/modules/assets/image/blog 1.webp" alt="">
                 <div class="blog_describe">
                     <h3><a href="">Màu sắc lòe loẹt dành cho phái mạnh</a></h3>
                     <p><i>Đăng ngày 26/10/2015 &nbsp; <b>bởi Bizweb Theme</b></i></p>
@@ -51,7 +47,7 @@
             </div>
             <hr class="blog_hr">
             <div class="blog_detail">
-                <img src="../assets/image/blog 2.webp" alt="">
+                <img src="/clothes_shop/modules/assets/image/blog 2.webp" alt="">
                 <div class="blog_describe">
                     <h3><a href="">Sơmi denim cho chàng khoe cá tính</a></h3>
                     <p><i>Đăng ngày 26/10/2015 &nbsp; <b>bởi Bizweb Theme</b></i></p>
@@ -63,7 +59,7 @@
             </div>
             <hr class="blog_hr">
             <div class="blog_detail">
-                <img src="../assets/image/blog 3.webp" alt="">
+                <img src="/clothes_shop/modules/assets/image/blog 3.webp" alt="">
                 <div class="blog_describe">
                     <h3><a href="">Màu sắc lòe loẹt dành cho phái mạnh</a></h3>
                     <p><i>Đăng ngày 26/10/2015 &nbsp; <b>bởi Bizweb Theme</b></i></p>
@@ -75,7 +71,7 @@
             </div>
             <hr class="blog_hr">
             <div class="blog_detail">
-                <img src="../assets/image/blog 4.webp" alt="">
+                <img src="/clothes_shop/modules/assets/image/blog 4.webp" alt="">
                 <div class="blog_describe">
                     <h3><a href="">Màu sắc lòe loẹt dành cho phái mạnh</a></h3>
                     <p><i>Đăng ngày 26/10/2015 &nbsp; <b>bởi Bizweb Theme</b></i></p>
@@ -87,7 +83,7 @@
             </div>
             <hr class="blog_hr">
             <div class="blog_detail">
-                <img src="../assets/image/blog 5.webp" alt="">
+                <img src="/clothes_shop/modules/assets/image/blog 5.webp" alt="">
                 <div class="blog_describe">
                     <h3><a href="">Màu sắc lòe loẹt dành cho phái mạnh</a></h3>
                     <p><i>Đăng ngày 26/10/2015 &nbsp; <b>bởi Bizweb Theme</b></i></p>
@@ -101,8 +97,3 @@
         </div>
     </div>
 </div>
-<div id="footer_insert">
-    <?php include '../includes/footer.php'; ?>
-</div>
-<script src="../assets/js/trangchu.js?v=<?= time(); ?>"></script>
-</body>

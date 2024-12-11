@@ -1,7 +1,3 @@
-<div id="header_insert">
-    <?php include '../includes/header.php'; ?>
-</div>
-
 <div id="content">
     <hr class="content_hr">
     <h2>LIÊN HỆ</h2>
@@ -48,9 +44,3 @@
         </div>
     </div>
 </div>
-
-<div id="footer_insert">
-    <?php include '../includes/footer.php'; ?>
-</div>
-<script src="../assets/js/trangchu.js?v=<?= time(); ?>"></script>
-</body>

@@ -54,6 +54,18 @@ function addsp($iddm, $name, $price, $sale, $img)
     $stmt->bindParam(':sale', $sale);
     $stmt->execute();
 }
+function getProdetail($id)
+{
+    $conn = connectDTB();
+    $sql = "SELECT * FROM product WHERE id = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $kq = $stmt->fetchAll();
+    return $kq;
+}
+
 function get_prodmain($iddm = 0, $kyw = "")
 {
     $conn = connectDTB();
@@ -88,27 +100,33 @@ function show_pro($ds)
             $gia = "Đang cập nhập";
         } else {
             if ($sp['sale'] > 0) {
-                $gia = '<span class="product_cost">' . $sp['price'] . '</span>
-                    <span class="produc_cost-sale">' . $sp['sale'] . '</span>';
+                $gia = '<span class="product_cost">' . $sp['price'] . 'đ</span>
+                    <span class="produc_cost-sale">' . $sp['sale'] . 'đ</span>';
             } else {
-                $gia = '<span class="product_cost">' . $sp['price'] . '</span>';
+                $gia = '<span class="product_cost">' . $sp['price'] . 'đ</span>';
             }
         }
-
         echo '<div class="content_product">
-                <div class="product_item">
-                    <img src="/clothes_shop/admin/' . $sp['img'] . '" alt="" class="product_image">
-                    <div class="product_select">
-                        <div class="product_buy">
-                            <i class="icon_cart fa fa-cart-plus" aria-hidden="true"></i>
-                            <span class="product_cart">giỏ hàng</span>
+                <form action="/clothes_shop/modules/index.php?act=addtocart" method="post">
+                    <div class="product_item">
+                        <a href="/clothes_shop/modules/index.php?act=productdetail&id=' . $sp['id'] . '"><img src="/clothes_shop/admin/' . $sp['img'] . '" alt="" class="product_image"></a>
+                        <div class="product_select">
+                            <div class="product_buy">
+                                <i class="icon_cart fa fa-cart-plus" aria-hidden="true"></i>
+                                <input type="submit" value="Giỏ hàng" name="addtocart">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="product_info">
-                    <p class="product_name"><a href="">' . $sp['name'] . '</a></p>
-                    ' . $gia . '
-                </div>
+                    <div class="product_info">
+                        <p class="product_name"><a href="/clothes_shop/modules/index.php?act=productdetail&id=' . $sp['id'] . '">' . $sp['name'] . '</a></p>
+                        ' . $gia . '
+                    </div>
+                        <input type="hidden" value="' . $sp['id'] . '" name="id">
+                        <input type="hidden" value="' . $sp['name'] . '" name="tensp">
+                        <input type="hidden" value="' . $sp['img'] . '" name="img">
+                        <input type="hidden" value="' . $sp['price'] . '" name="gia">
+                        
+                </form>
             </div>';
     }
 }

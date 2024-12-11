@@ -1,0 +1,68 @@
+.content_table {
+    width: 1184px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.category h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 14px;
+}
+
+.category .cate_table {
+    width: 70%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Dòng tiêu đề */
+tr:first-child {
+    background-color: #007BFF;
+    /* Màu xanh dương */
+    /* color: white; */
+    text-transform: uppercase;
+}
+
+/* Dòng chẵn */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Dòng lẻ */
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hiệu ứng hover */
+tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Liên kết */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

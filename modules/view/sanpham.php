@@ -1,7 +1,3 @@
-<div id="header_insert">
-    <?php include '../includes/header.php'; ?>
-</div>
-
 <div id="content">
     <hr>
     <h3 class="content_subheading">tất cả sản phẩm</h3>
@@ -16,8 +12,3 @@
     </div>
 
 </div>
-<div id="footer_insert">
-    <?php include '../includes/footer.php'; ?>
-</div>
-<script src="../assets/js/trangchu.js?v=<?= time(); ?>"></script>
-</body>

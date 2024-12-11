@@ -15,206 +15,6 @@ html {
 }
 
 
-#header {
-    width: 1184px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.header_topbar {
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    font-size: 1.1rem;
-    color: #AAA;
-    padding: 12px;
-}
-
-.username {
-    display: flex;
-}
-
-.header_topbar img {
-    width: 20px;
-    margin-right: 10px;
-}
-
-.header_topbar li {
-    /* font-size: 1.3rem; */
-    color: #AAA;
-    text-transform: capitalize;
-}
-
-.header_topbar .logout a {
-    text-decoration: none;
-    margin-left: 15px;
-    color: #AAA;
-}
-
-
-.header_register {
-    margin-right: 25px;
-}
-
-.header_register:hover,
-.header_login:hover {
-    color: var(--black-color);
-    cursor: pointer;
-}
-
-.header_hr {
-    height: 1px;
-    background-color: black;
-    border: none;
-}
-
-.header_midbar {
-    margin: 32px 0 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-}
-
-.header_search {
-    display: flex;
-}
-
-.search-input {
-    font-size: 1.3rem;
-    padding: 0 20px;
-    height: 34px;
-    width: 170px;
-    color: var(--black-color);
-    border-right: none;
-    border: 1px solid var(--black-color);
-}
-
-.search-input::placeholder {
-    color: var(--black-color);
-}
-
-.header_logo {
-    font-size: 24px;
-    margin-right: 92px;
-}
-
-.header_icon-search {
-    background-color: var(--black-color);
-    color: white;
-    font-size: 1.4rem;
-    padding: 0 25px;
-    white-space: nowrap;
-    border: none;
-}
-
-.header_icon-search:hover {
-    color: red;
-    cursor: pointer;
-}
-
-.header_cart {
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-/* Navigation Bar */
-.header_nav {
-    display: flex;
-    justify-content: center;
-}
-
-.header_nav li {
-    display: inline-block;
-    position: relative;
-}
-
-.header_nav>li>a {
-    color: var(--black-color);
-    font-size: 1.4rem;
-    font-weight: 800;
-    line-height: 50px;
-}
-
-.header_nav li a {
-    text-decoration: none;
-    padding: 0 31px;
-    display: block;
-}
-
-.header_nav li:hover .sub_nav {
-    display: block;
-    z-index: 2;
-}
-
-.header_nav>li:hover>a {
-    color: #ffff;
-    background-color: var(--black-color);
-    transition: ease-in 0.3s;
-}
-
-.header_nav>li.active>a {
-    color: #ffff;
-    background-color: var(--black-color);
-}
-
-.header_nav .sub_nav {
-    display: none;
-    position: absolute;
-    top: 101%;
-    background-color: var(--black-color);
-    min-width: 200px;
-}
-
-.header_nav .sub_nav li {
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    border-top: 1px solid #fff;
-    line-height: 40px;
-    position: relative;
-    width: 100%;
-}
-
-.header_nav .sub_nav a {
-    color: #FFF;
-    font-size: 1.2rem;
-}
-
-.header_nav .sub_nav>li:hover>a,
-.sub_nav .nav_product li:hover a {
-    color: #b8d0de;
-    background-color: var(--black-color);
-}
-
-.header_nav .nav_down {
-    position: absolute;
-    margin-left: 9px;
-    top: 15px;
-}
-
-.sub_nav .nav_product {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: -1.5px;
-    background-color: var(--black-color);
-    min-width: 200px;
-    z-index: 1000;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
-    border-top: 1px solid #fff;
-}
-
-.sub_nav li:hover .nav_product {
-    display: block;
-}
-
-.sub_nav .nav_right {
-    position: absolute;
-    right: 10px;
-    top: 14px;
-}
 
 #banner {
     width: 1184px;
@@ -258,6 +58,7 @@ html {
     display: flex;
     justify-content: space-between;
     margin: 46px 0;
+    position: relative;
 }
 
 .img_brand {
@@ -281,127 +82,7 @@ html {
 }
 
 /* ---CONTENT----- */
-#content {
-    margin: 20px auto;
-    max-width: 1180px;
-    width: 100%;
-}
 
-.content_subheading {
-    color: var(--black-color);
-    text-transform: uppercase;
-    font-size: 2rem;
-    text-align: center;
-    margin: 60px 0;
-}
-
-.content_subheading:hover {
-    color: red;
-    cursor: pointer;
-}
-
-.content_shop {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 26px 40px;
-    margin-bottom: 40px;
-}
-
-.content_shop .product_image {
-    max-height: 350px;
-    max-width: 260px;
-    width: 100%;
-}
-
-.product_item {
-    position: relative;
-}
-
-.product_info {
-    text-align: center;
-    margin-top: 16px;
-    z-index: 1;
-}
-
-.product_info a {
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: var(--black-color);
-}
-
-.product_info a:hover {
-    color: #E95144;
-    cursor: pointer;
-}
-
-.product_name {
-    font-size: 1.3rem;
-    color: var(--black-color);
-    margin-bottom: 4px;
-}
-
-.product_cost {
-    font-size: 1.3rem;
-    color: #E95144;
-    font-weight: 900;
-}
-
-.produc_cost-sale {
-    font-size: 1.3rem;
-    font-weight: 900;
-    text-decoration: line-through;
-    color: #B5B5B5;
-    margin-left: 3px;
-}
-
-.product_select {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black-color);
-    color: #FFF;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    min-height: 42px;
-    width: 98%;
-    left: 0;
-    text-align: center;
-    bottom: -7px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(70%);
-    transition: opacity 0.5s ease, transform 0.25s ease-in-out;
-}
-
-.product_buy {
-    display: flex;
-}
-
-.icon_cart {
-    margin-right: 5px;
-}
-
-.product_item:hover .product_select {
-    opacity: 1;
-    transform: translateY(0);
-    bottom: 0;
-    pointer-events: auto;
-}
-
-.product_select.product_buy {
-    pointer-events: none;
-}
-
-.product_buy:hover {
-    cursor: pointer;
-    color: #E95144;
-}
-
-.product_image:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
 
 .content_more {
     display: flex;
@@ -426,6 +107,7 @@ html {
     color: #ffff;
     background-color: var(--black-color);
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .content_about {
@@ -484,6 +166,14 @@ html {
     color: #FFFF;
     background-color: var(--black-color);
     text-transform: uppercase;
+    border: transparent;
+}
+
+.btn_submit:hover {
+    color: var(--black-color);
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .content_social {
@@ -503,6 +193,13 @@ html {
     width: 48px;
     border-radius: 50%;
     margin-right: 5px;
+}
+
+.content_app-social i[class*="fa-"]:hover {
+    color: var(--black-color);
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .content_register h2,
@@ -555,177 +252,3 @@ html {
 /* MODAL */
 
 /* Style các input */
-.enter_form input[type="text"],
-.enter_form input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0 16px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    font-size: 1.4rem;
-}
-
-.enter_form input[type="text"]:focus,
-.enter_form input[type="password"]:focus,
-.enter_name input[type="text"]:focus {
-    background-color: #e8f0fe;
-    outline: none;
-}
-
-.enter_check input[type="checkbox"] {
-    font-size: 1.7rem;
-    margin-right: 5px;
-}
-
-.enter_check {
-    display: flex;
-}
-
-.enter_form p,
-.enter_name p {
-    font-size: 1.6rem;
-    color: var(--black-color);
-}
-
-.enter_name {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    gap: 19px;
-}
-
-.enter_name input[type="text"] {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    font-size: 1.4rem;
-    padding: 12px;
-    width: 208px;
-    margin: 10px 0 16px 0;
-}
-
-.clearfix {
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-    padding: 12px 18px;
-    margin: 10px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.clearfix button:hover {
-    opacity: 1;
-    background-color: #cccc;
-}
-
-/* Style cho nút hủy */
-.cancelbtn {
-    padding: 12px 18px;
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    margin-right: 10px;
-}
-
-.signupbtn {
-    background-color: #3ba756;
-    border: none;
-    transition: all 0.3s ease;
-    margin-right: 18px;
-}
-
-
-
-/* Chia đều nút cancel và signup */
-.cancelbtn,
-.signupbtn {
-    width: 30%;
-    border-radius: 5px;
-}
-
-/* Container cho nội dung modal */
-.container {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.container h1 {
-    font-size: 2.5rem;
-    margin: 16px 0;
-    color: var(--black-color);
-    text-align: center;
-}
-
-.container .form_note {
-    margin-bottom: 5px;
-    color: var(--black-color);
-    font-size: 1.2rem;
-}
-
-
-/* Modal (background) */
-.modal {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* Modal nội dung */
-.modal-sign_up,
-.modal-log_in {
-    background-color: #fefefe;
-    /* Căn giữa nội dung */
-    display: flex;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 10px;
-    /* Làm tròn khung */
-    width: 30%;
-    /* Chiều rộng modal */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Đổ bóng */
-}
-
-/* Style đường kẻ ngang */
-hr {
-    border: 1px solid #e1e1e1;
-    margin-bottom: 20px;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Responsive cho màn hình nhỏ */
-@media screen and (max-width: 768px) {
-
-    .modal-sign_up,
-    .modal-log_in {
-        width: 80%;
-        /* Modal nhỏ hơn trên màn hình nhỏ */
-    }
-
-    .cancelbtn,
-    .signupbtn {
-        width: 100%;
-        /* Nút full chiều rộng */
-        margin: 10px 0;
-    }
-}

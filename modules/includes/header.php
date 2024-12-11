@@ -1,12 +1,3 @@
-<?php
-session_start();
-include '/Wampp/www/PhpProgram/clothes_shop/connection/connect_dtb.php';
-include '/Wampp/www/PhpProgram/clothes_shop/connection/CatalogHandling.php';
-include '/Wampp/www/PhpProgram/clothes_shop/connection/ProductHandling.php';
-$dsdm = getAll_catalog();
-$sphome2 = getAll_prod(0, "");
-$sphome1 = get_prodmain(0, "");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +9,14 @@ $sphome1 = get_prodmain(0, "");
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/clothes_shop/modules/assets/font/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/clothes_shop/modules/assets/css/trangchu.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="/clothes_shop/modules/assets/css/header.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="/clothes_shop/modules/assets/css/footer.css?v=<?= time(); ?>">
     <link rel="stylesheet" href="/clothes_shop/modules/assets/css/gioithieu.css?v=<?= time(); ?>">
     <link rel="stylesheet" href="/clothes_shop/modules/assets/css/sanpham.css?v=<?= time(); ?>">
     <link rel="stylesheet" href="/clothes_shop/modules/assets/css/tintuc.css?v=<?= time(); ?>">
     <link rel="stylesheet" href="/clothes_shop/modules/assets/css/lienhe.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="/clothes_shop/modules/assets/css/viewcart.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="/clothes_shop/modules/assets/css/productdetail.css?v=<?= time(); ?>">
     <style>
     </style>
 </head>
@@ -32,7 +27,7 @@ $sphome1 = get_prodmain(0, "");
             <ul class="header_topbar">
                 <?php if (isset($_SESSION['user'])): ?>
                     <li class="username">
-                        <img src="/clothes_shop/assets/image/user.jpeg" alt="">
+                        <img src="/clothes_shop/modules/assets/image/user.jpeg" alt="">
                         <span><?php echo htmlspecialchars($_SESSION['user']); ?></span>
                     </li>
                     <li class="logout"><a href="/clothes_shop/admin/logout.php">Đăng xuất</a></li>
@@ -50,26 +45,25 @@ $sphome1 = get_prodmain(0, "");
                             aria-hidden="true"></i></button>
                 </li>
                 <li class="header_logo">
-                    <img src="../assets/image/logo.png" alt="">
+                    <img src="/clothes_shop/modules/assets/image/logo.png" alt="">
                 </li>
                 <li class="header_cart">
                     <span><i class=" header_icon-cart fa fa-shopping-cart" aria-hidden="true"></i></span>
-                    <span class="heaer_icon_name">GIỎ HÀNG</span>
+                    <a href="/clothes_shop/modules/index.php?act=giohang" class="header_icon_name">GIỎ HÀNG</a>
                 </li>
             </ul>
 
             <ul class="header_nav">
-                <li><a href="/clothes_shop/modules/view/trangchu.php">TRANG CHỦ</a></li>
-                <li><a href="/clothes_shop/modules/view/gioithieu.php">GIỚI THIỆU</a></li>
+                <li><a href="/clothes_shop/modules/index.php?act=trangchu">TRANG CHỦ</a></li>
+                <li><a href="/clothes_shop/modules/index.php?act=gioithieu">GIỚI THIỆU</a></li>
                 <li>
-                    <a href="/clothes_shop/modules/view/sanpham.php">
+                    <a href="/clothes_shop/modules/index.php?act=sanpham">
                         SẢN PHẨM
                         <i class=" nav_down fa fa-sort-desc" aria-hidden="true"></i>
                     </a>
 
                     <ul class="sub_nav">
                         <?php
-                        // include './clothes_shop/modules/index.php';
                         foreach ($dsdm as $dm) {
                             echo '<li><a href="/clothes_shop/modules/index.php?act=product&id=' . $dm['id'] . '">' . $dm['cat_name'] . '</a></li>';
                         }
@@ -78,7 +72,7 @@ $sphome1 = get_prodmain(0, "");
 
 
                 </li>
-                <li><a href="/clothes_shop/modules/view/tintuc.php">TIN TỨC</a></li>
-                <li><a href="/clothes_shop/modules/view/lienhe.php">LIÊN HỆ</a></li>
+                <li><a href="/clothes_shop/modules/index.php?act=tintuc">TIN TỨC</a></li>
+                <li><a href="/clothes_shop/modules/index.php?act=lienhe">LIÊN HỆ</a></li>
             </ul>
         </div>

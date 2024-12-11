@@ -1,7 +1,5 @@
 <!-- Header -->
-<div id="header_insert">
-    <?php include '../includes/header.php'; ?>
-</div>
+
 <div id="content_intro">
     <hr class="content_hr">
     <h2>GIỚI THIỆU</h2>
@@ -47,12 +45,3 @@
         phục nữ, mỹ phẩm nam hay trang sức hãy gọi ngay tới bộ phận chăm sóc khách hàng.
     </p>
 </div>
-
-<div id="footer_insert">
-    <?php include '../includes/footer.php'; ?>
-</div>
-<script src="../assets/js/trangchu.js?v=<?= time(); ?>"></script>
-
-</body>
-
-</html>

@@ -69,6 +69,7 @@ html {
 
 .content_index a:hover {
     color: var(--black-color);
+    text-decoration: none;
 }
 
 .content_index p,
@@ -99,6 +100,7 @@ html {
 
 .blog_describe a:hover {
     color: #E95144;
+    text-decoration: none;
 }
 
 .blog_describe p {
@@ -127,6 +129,7 @@ html {
 .blog_readmore a:hover {
     color: var(--black-color);
     background-color: #FFFF;
+    text-decoration: none;
 }
 
 .blog_hr {

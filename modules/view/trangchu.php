@@ -1,7 +1,4 @@
 <!-- HEADER -->
-<?php
-include '../includes/header.php';
-?>
 <div id="banner">
     <ul class="header_banner">
         <li><a href="">MIỄN PHÍ VẬN CHUYỂN</a></li>
@@ -11,19 +8,25 @@ include '../includes/header.php';
 </div>
 <!-- SLIDER -->
 <div id="slider">
-    <img src="../assets/image/slider_1.webp" alt="">
+    <img src="/clothes_shop/modules/assets/image/slider_1.webp" alt="">
     <div class="img_banner">
-        <img src="../assets/image/banner_1.webp" alt="">
-        <img src="../assets/image/banner_2.webp" alt="">
-        <img src="../assets/image/banner_3.webp" alt="">
+        <div class="banner">
+            <a href=""><img src="/clothes_shop/modules/assets/image/banner_1.webp" alt=""></a>
+        </div>
+        <div class="banner">
+            <a href=""><img src="/clothes_shop/modules/assets/image/banner_2.webp" alt=""></a>
+        </div>
+        <div class="banner">
+            <a href=""><img src="/clothes_shop/modules/assets/image/banner_3.webp" alt=""></a>
+        </div>
     </div>
     <div class="img_brand">
         <i class="img_suft fa fa-angle-left" aria-hidden="true"></i>
-        <img src="../assets/image/brand_1.webp" alt="">
-        <img src="../assets/image/brand_2.webp" alt="">
-        <img src="../assets/image/brand_3.webp" alt="">
-        <img src="../assets/image/brand_4.webp" alt="">
-        <img src="../assets/image/brand_5.webp" alt="">
+        <img src="/clothes_shop/modules/assets/image/brand_1.webp" alt="">
+        <img src="/clothes_shop/modules/assets/image/brand_2.webp" alt="">
+        <img src="/clothes_shop/modules/assets/image/brand_3.webp" alt="">
+        <img src="/clothes_shop/modules/assets/image/brand_4.webp" alt="">
+        <img src="/clothes_shop/modules/assets/image/brand_5.webp" alt="">
         <i class="img_suft fa fa-angle-right" aria-hidden="true"></i>
     </div>
     <hr class="img_hr" />
@@ -38,7 +41,7 @@ include '../includes/header.php';
     </div>
 
     <div class="content_more">
-        <a href="">
+        <a href="/clothes_shop/modules/index.php?act=xemthem">
             xem thêm
         </a>
     </div>
@@ -75,13 +78,3 @@ include '../includes/header.php';
     </div>
 </div>
 <!--FOOTER-->
-
-<?php include '../includes/footer.php'; ?>
-
-<!-- Modal layout -->
-
-</div>
-<script src="../assets/js/trangchu.js?v=<?= time(); ?>"></script>
-</body>
-
-</html>

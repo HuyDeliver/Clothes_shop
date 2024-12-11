@@ -18,8 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             } elseif ($role == 0) { // Tài khoản người dùng
                 echo "<script>alert('Bạn đã đăng nhập thành công!');</script>";
-                header('Location: ../modules/view/trangchu.php');
-                // include './clothes_shop/modules/view/trangchu.php';
+                header('Location: ../modules/index.php?act=login');
                 exit();
             }
         }
