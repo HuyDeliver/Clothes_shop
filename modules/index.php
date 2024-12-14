@@ -114,19 +114,19 @@ if (isset($_GET['act'])) {
             include '../modules/view/viewcart.php';
             break;
         case 'deletecart':
-            if (isset($_GET['i']) && ($_GET['i'] > 0)) {
+            if (isset($_GET['i']) && ($_GET['i'] >= 0 && $_GET['i'] < count($_SESSION['giohang']))) {
                 $i = $_GET['i'];
                 if (isset($_SESSION['giohang']) && (count($_SESSION['giohang']) > 0)) {
-                    array_splice($_SESSION['giohang'], $i, 1);
+                    unset($_SESSION['giohang'][$i]);
                 }
-            } else {
-                if (isset($_SESSION['giohang'])) unset($_SESSION['giohang']);
             }
+            header('Location: ../modules/index.php?act=viewcart');
+            break;
+        case 'deleteallcart':
             if (isset($_SESSION['giohang']) && (count($_SESSION['giohang']) > 0)) {
-                header('Location: ../modules/index.php?act=viewcart');
-            } else {
-                header('Location: ../modules/index.php?act=trangchu');
+                unset($_SESSION['giohang']);
             }
+            header('Location: ../modules/index.php?act=trangchu');
             break;
         default:
             include '../modules/view/trangchu.php';
