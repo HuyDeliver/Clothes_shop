@@ -1,6 +1,24 @@
 <div id="main">
     <div class="category">
         <h2>ĐƠN HÀNG</h2>
+        <form action="../admin/index.php?act=updatedh" method="post">
+            <select name="ttdh" id="ttdh-select">
+                <option value="">Chọn tình trạng đơn hàng</option>
+                <?php
+                for ($i = 0; $i <= 3; $i++) {
+                    $tt = cartstatus($i);
+                    echo '<option value="' . $i . '"';
+                    if ($i == $tt) {
+                        echo 'selected';
+                    }
+                    echo '>' . $tt . '</option>';
+                }
+                ?>
+            </select>
+            <input type="text" name="madh" value="<?= $getOne[0]['madh'] ?>">
+            <input type="hidden" name="id" value="<?= $getOne[0]['id'] ?>">
+            <input type="submit" name="submit" value="Cập nhập">
+        </form>
         <table class="cate_table">
             <tr>
                 <th>STT</th>
@@ -25,7 +43,7 @@
                             <td>' . $ca['soluong'] . '</td>
                             <td>' . $ca['tongdonhang'] . 'đ</td>
                             <td>' . $ttdh . '</td>
-                            <td><a href="../admin/index.php?act=updatedh&id=' . $ca['id'] . '">Sửa</a> | <a href="../admin/index.php?act=deletedh&id=' . $ca['id'] . '">Xóa</a> | <a href="../admin/index.php?act=detaildh&id=' . $ca['id'] . '">Chi tiết</a></td>
+                            <td><a href="../admin/index.php?act=updatedh&id=' . $ca['id'] . '">Sửa</a> | <a href="../admin/index.php?act=deletedh&id=' . $ca['id'] . '">Xóa</a> | <a href="../admin/index.php?act=detaildh">Chi tiết</a></td>
                         </tr>';
                     $i++;
                 }

@@ -1,7 +1,7 @@
 <div id="main">
     <div class="category">
         <h2>TÀI KHOẢN</h2>
-        <form action="/clothes_shop/admin/index.php?act=updatetk" method="post">
+        <form action="../admin/index.php?act=updatetk" method="post">
             <input type="text" name="tentk" value="<?= $takeone[0]['user'] ?>">
 
             <input type="email" name="email" value="<?= $takeone[0]['email'] ?>">
@@ -35,7 +35,7 @@
                             <td>' . $user['email'] . '</td>
                             <td>' . $user['password'] . '</td>
                             <td>' . $user['role'] . '</td>
-                            <td><a href="/clothes_shop/admin/index.php?act=updatetk&id=' . $user['id'] . '">Sửa</a> | <a href="/clothes_shop/admin/index.php?act=deletetk&id=' . $user['id'] . '">Xóa</a></td>
+                            <td><a href="../admin/index.php?act=updatetk&id=' . $user['id'] . '">Sửa</a> | <a href="../admin/index.php?act=deletetk&id=' . $user['id'] . '">Xóa</a></td>
                         </tr>';
                     $i++;
                 }

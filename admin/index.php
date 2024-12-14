@@ -6,6 +6,7 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
     include '../connection/CatalogHandling.php';
     include '../connection/UserControlling.php';
     include '../connection/ProductHandling.php';
+    include '../connection/CartControlling.php';
     include '../admin/view/header.php';
     // connectDTB();
 
@@ -226,6 +227,39 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
 
 
             case 'donhang':
+                $kq = getAllCart();
+                include '../admin/view/donhang.php';
+                break;
+            case 'detaildh':
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    $kq = getcartDetail($id);
+                }
+                include '../admin/view/detaildh.php';
+                break;
+            case 'updatedh':
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    $getOne = getOnecart($id);
+                    $kq = getAllCart();
+                    include '../admin/view/updatedh.php';
+                    break;
+                }
+                if (isset($_POST['id'])) {
+                    $id = $_POST['id'];
+                    $ttdh = $_POST['ttdh'];
+                    $madh = $_POST['madh'];
+                    updatedh($id, $madh, $ttdh);
+                    $kq = getAllCart();
+                    include '../admin/view/donhang.php';
+                    break;
+                }
+            case 'deletedh':
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    deletdh($id);
+                }
+                $kq = getAllCart();
                 include '../admin/view/donhang.php';
                 break;
             case 'thoat':

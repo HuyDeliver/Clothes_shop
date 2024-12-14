@@ -76,8 +76,9 @@ html {
     list-style-type: none;
 }
 
-.header_search {
+.header_search form {
     display: flex;
+    position: relative;
 }
 
 .search-input {
@@ -87,7 +88,11 @@ html {
     width: 170px;
     color: var(--black-color);
     border-right: none;
-    border: 1px solid var(--black-color);
+    border: 0.5px solid var(--black-color);
+}
+
+.search-input:focus {
+    outline: none;
 }
 
 .search-input::placeholder {
@@ -101,14 +106,21 @@ html {
 
 .header_icon-search {
     background-color: var(--black-color);
-    color: white;
-    font-size: 1.4rem;
-    padding: 0 25px;
+    padding: 0 30px;
     white-space: nowrap;
     border: none;
+    cursor: pointer;
 }
 
-.header_icon-search:hover {
+.icon_search {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    right: 23px;
+    top: 10px;
+}
+
+.icon_search:hover {
     color: red;
     cursor: pointer;
 }

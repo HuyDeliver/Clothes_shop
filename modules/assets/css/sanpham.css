@@ -124,25 +124,28 @@ html {
     pointer-events: auto;
 }
 
-.product_select.product_buy {
-    pointer-events: none;
+.product_buy:hover {
+    color: #E95144;
 }
 
-.product_buy:hover {
-    cursor: pointer;
+.product_buy:hover .icon_cart,
+.product_buy:hover input[type="submit"] {
     color: #E95144;
+    cursor: pointer;
+    transition: color 0.25s ease;
 }
 
 .product_buy input[type="submit"] {
     text-transform: uppercase;
     color: #ffff;
-    border: transparent;
+    border: none;
     background-color: var(--black-color);
     font-size: 1.2rem;
     padding-top: 2px;
 }
 
 .product_image:hover {
+    transition: 0.2s ease-in-out;
     opacity: 0.6;
     cursor: pointer;
 }

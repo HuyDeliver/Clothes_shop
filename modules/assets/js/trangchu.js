@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const sigUp = $('.header_register'); // Nút "Signup"
 
     logIn.onclick = function () {
-        window.location.href = '/clothes_shop/admin/login.php'
+        window.location.href = '../admin/login.php'
     }
     sigUp.onclick = function () {
-        window.location.href = '/clothes_shop/admin/register.php'
+        window.location.href = '../admin/register.php'
     }
 
 })

@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             } elseif ($role == 0) { // Tài khoản người dùng
                 echo "<script>alert('Bạn đã đăng nhập thành công!');</script>";
-                header('Location: ../modules/index.php?act=login');
+                header('Location: ../modules/index.php?act=trangchu');
                 exit();
             }
         }
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const $$ = document.querySelectorAll.bind(document);
         const cancelBtn = $('.cancelbtn');
         cancelBtn.onclick = function() {
-            window.location.href = '/clothes_shop/modules/view/trangchu.php';
+            window.location.href = '../modules/index.php?act=trangchu';
         }
     </script>
 

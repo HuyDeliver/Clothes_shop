@@ -1,9 +1,9 @@
 <div id="content_detail">
     <hr class="pro_hr">
     <div class="pro_detail">
-        <form action="">
+        <form action="../modules/index.php?act=addtocart" method="post">
             <div class="pro_img">
-                <img src="/clothes_shop/admin/<?= $kq1[0]['img']; ?>" alt="">
+                <img src="../admin/<?= $kq1[0]['img']; ?>" alt="">
             </div>
             <?php
             $price = $kq1[0]['price'];
@@ -30,13 +30,17 @@
 
                 <div class="pro_quantity">
                     Số lượng:
-                    <input type="number" name="" id="">
+                    <input type="number" value="1" min="1" max="50" required name="sl">
                 </div>
                 <?php
                 echo $gia;
                 ?>
                 <div class="pro_submit">
                     <input type="submit" value="Thêm vào giỏ hàng" name="addtocart">
+                    <input type="hidden" value="<?= $kq1[0]['id'] ?>" name="id">
+                    <input type="hidden" value="<?= $kq1[0]['name'] ?>" name="tensp">
+                    <input type="hidden" value="<?= $kq1[0]['img'] ?>" name="img">
+                    <input type="hidden" value="<?= $kq1[0]['price'] ?>" name="gia">
                 </div>
             </div>
         </form>

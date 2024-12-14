@@ -8,25 +8,25 @@
 </div>
 <!-- SLIDER -->
 <div id="slider">
-    <img src="/clothes_shop/modules/assets/image/slider_1.webp" alt="">
+    <img src="../modules/assets/image/slider_1.webp" alt="">
     <div class="img_banner">
         <div class="banner">
-            <a href=""><img src="/clothes_shop/modules/assets/image/banner_1.webp" alt=""></a>
+            <a href=""><img src="../modules/assets/image/banner_1.webp" alt=""></a>
         </div>
         <div class="banner">
-            <a href=""><img src="/clothes_shop/modules/assets/image/banner_2.webp" alt=""></a>
+            <a href=""><img src="../modules/assets/image/banner_2.webp" alt=""></a>
         </div>
         <div class="banner">
-            <a href=""><img src="/clothes_shop/modules/assets/image/banner_3.webp" alt=""></a>
+            <a href=""><img src="../modules/assets/image/banner_3.webp" alt=""></a>
         </div>
     </div>
     <div class="img_brand">
         <i class="img_suft fa fa-angle-left" aria-hidden="true"></i>
-        <img src="/clothes_shop/modules/assets/image/brand_1.webp" alt="">
-        <img src="/clothes_shop/modules/assets/image/brand_2.webp" alt="">
-        <img src="/clothes_shop/modules/assets/image/brand_3.webp" alt="">
-        <img src="/clothes_shop/modules/assets/image/brand_4.webp" alt="">
-        <img src="/clothes_shop/modules/assets/image/brand_5.webp" alt="">
+        <img src="../modules/assets/image/brand_1.webp" alt="">
+        <img src="../modules/assets/image/brand_2.webp" alt="">
+        <img src="../modules/assets/image/brand_3.webp" alt="">
+        <img src="../modules/assets/image/brand_4.webp" alt="">
+        <img src="../modules/assets/image/brand_5.webp" alt="">
         <i class="img_suft fa fa-angle-right" aria-hidden="true"></i>
     </div>
     <hr class="img_hr" />
@@ -41,7 +41,7 @@
     </div>
 
     <div class="content_more">
-        <a href="/clothes_shop/modules/index.php?act=xemthem">
+        <a href="../modules/index.php?act=sanpham">
             xem thêm
         </a>
     </div>

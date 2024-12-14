@@ -106,7 +106,7 @@
 }
 
 .category .cate_table {
-    width: 70%;
+    width: 90%;
     margin-top: 15px;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
@@ -117,7 +117,7 @@ th,
 td {
     border: 1px solid #ddd;
     padding: 12px;
-    text-align: left;
+    text-align: center;
 }
 
 /* Dòng tiêu đề */

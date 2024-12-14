@@ -95,14 +95,15 @@ html {
     background-color: var(--black-color);
     line-height: 65px;
     padding: 0 25px;
+    border: none;
 }
 
 .pro_submit input[type="submit"]:hover {
     color: #232323;
     background-color: #ffff;
-    transition: 0.2s ease-in-out;
-    border: 1px solid #232323;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
+    border: 1px solid #fff4f4;
 }
 
 .pro_info {

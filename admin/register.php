@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const $$ = document.querySelectorAll.bind(document);
         const cancelBtn = $('.cancelbtn');
         cancelBtn.onclick = function() {
-            window.location.href = '/clothes_shop/modules/view/trangchu.php';
+            window.location.href = '../modules/index.php?act=trangchu';
         }
     </script>
 

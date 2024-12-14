@@ -4,7 +4,7 @@
         <?php
         // echo var_dump($kqone)
         ?>
-        <form action="/clothes_shop/admin/index.php?act=updatedmform" method="post">
+        <form action="../admin/index.php?act=updatedmform" method="post">
             <input type="text" name="tendm" value="<?= $kqone[0]['cat_name'] ?>">
             <input type="hidden" name="id" value="<?= $kqone[0]['id'] ?>">
             <input type="submit" name="capnhap" value="Cập nhập">
@@ -29,7 +29,7 @@
                             <td>' . $dm['cat_name'] . '</td>
                             <td>' . $dm['priority'] . '</td>
                             <td>' . $dm['display'] . '</td>
-                            <td><a href="/clothes_shop/admin/index.php?act=updatedmform&id=' . $dm['id'] . '">Sửa</a> | <a href="/clothes_shop/admin/index.php?act=delete&id=' . $dm['id'] . '">Xóa</a></td>
+                            <td><a href="../admin/index.php?act=updatedmform&id=' . $dm['id'] . '">Sửa</a> | <a href="../admin/index.php?act=delete&id=' . $dm['id'] . '">Xóa</a></td>
                         </tr>';
                     $i++;
                 }

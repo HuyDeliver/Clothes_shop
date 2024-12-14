@@ -1,7 +1,7 @@
 <div id="main">
     <div class="category">
         <h2>UPDATE SẢN PHẨM</h2>
-        <form action="/clothes_shop/admin/index.php?act=updatesp" method="post" enctype="multipart/form-data">
+        <form action="../admin/index.php?act=updatesp" method="post" enctype="multipart/form-data">
             <select name="iddm" id="">
                 <option value="0">Chọn danh mục</option>
                 <?php
@@ -52,7 +52,7 @@
                             <td><img src="../admin/' . htmlspecialchars($prod['img']) . '" alt="Hình sản phẩm" width="80"></td>
                             <td>' . htmlspecialchars($prod['price']) . '</td>
                             <td>' . htmlspecialchars($prod['sale']) . '</td>
-                            <td><a href="/clothes_shop/admin/index.php?act=updatesp&id=' . $prod['id'] . '">Sửa</a> | <a href="/clothes_shop/admin/index.php?act=deletesp&id=' . $prod['id'] . '">Xóa</a></td>
+                            <td><a href="../admin/index.php?act=updatesp&id=' . $prod['id'] . '">Sửa</a> | <a href="../admin/index.php?act=deletesp&id=' . $prod['id'] . '">Xóa</a></td>
                         </tr>';
                     $i++;
                 }

@@ -213,42 +213,6 @@ html {
     margin: 20px 0 24px;
 }
 
-#footer {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: var(--black-color);
-}
-
-.footer_info {
-    padding: 40px 0;
-}
-
-.footer_info h3 {
-    color: #FFFF;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.footer_info li {
-    list-style-type: none;
-    color: #CBCBCB;
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-}
-
-.footer_info .icon_footer {
-    margin-right: 5px;
-}
-
-.footer_info li a {
-    text-decoration: none;
-    color: #CBCBCB;
-}
-
-.footer_info li a:hover {
-    color: #b4abab;
-}
-
 /* MODAL */
 
 /* Style các input */
