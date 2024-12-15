@@ -249,7 +249,11 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] == 1)) {
                     $id = $_POST['id'];
                     $ttdh = $_POST['ttdh'];
                     $madh = $_POST['madh'];
-                    updatedh($id, $madh, $ttdh);
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $tel = $_POST['tel'];
+                    $address = $_POST['address'];
+                    updatedh($id, $madh, $ttdh, $email, $name, $address, $tel);
                     $kq = getAllCart();
                     include '../admin/view/donhang.php';
                     break;

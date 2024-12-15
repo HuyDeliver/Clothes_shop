@@ -9,6 +9,9 @@
                 <th>Số lượng hàng</th>
                 <th>Giá trị đơn hàng</th>
                 <th>Tình trạng đơn hàng</th>
+                <th>email</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
                 <th>Hành động</th>
             </tr>
             <?php
@@ -25,7 +28,10 @@
                             <td>' . $ca['soluong'] . '</td>
                             <td>' . $ca['tongdonhang'] . 'đ</td>
                             <td>' . $ttdh . '</td>
-                            <td><a href="../admin/index.php?act=updatedh&id=' . $ca['id'] . '">Sửa</a> | <a href="../admin/index.php?act=deletedh&id=' . $ca['id'] . '">Xóa</a> | <a href="../admin/index.php?act=detaildh&id=' . $ca['id'] . '">Chi tiết</a></td>
+                            <td>' . $ca['email'] . '</td>
+                            <td>' . $ca['tel'] . '</td>
+                            <td>' . $ca['address'] . '</td>
+                            <td><a href="../admin/index.php?act=updatedh&id=' . $ca['id'] . '">Sửa</a> <br> <a href="../admin/index.php?act=deletedh&id=' . $ca['id'] . '">Xóa</a> <br> <a href="../admin/index.php?act=detaildh&id=' . $ca['id'] . '">Chi tiết</a></td>
                         </tr>';
                     $i++;
                 }

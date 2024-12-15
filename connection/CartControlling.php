@@ -66,10 +66,11 @@ function getOnecart($id)
     return $kq;
 }
 
-function updatedh($id, $madh, $ttdh)
+function updatedh($id, $madh, $ttdh, $email, $name, $address, $tel)
 {
     $conn = connectDTB();
-    $sql = "UPDATE `order` SET madh='" . $madh . "', ttdh='" . $ttdh . "' WHERE id=$id";
+    $sql = "UPDATE `order` SET madh='" . $madh . "', ttdh='" . $ttdh . "',  ttdh='" . $ttdh . "',  name='" . $name . "',  address='" . $address . "',
+    email='" . $email . "', tel='" . $tel . "' WHERE id=$id";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 }
