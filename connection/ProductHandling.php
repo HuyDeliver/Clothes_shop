@@ -72,7 +72,7 @@ function get_prodmain($iddm = 0, $kyw = "")
     $sql = "SELECT * FROM product WHERE 1 ";
     if ($iddm > 0) $sql .= " AND id_catalog=" . $iddm;
     if ($kyw != "") $sql .= " AND  name= LIKE '%" . $kyw . "%'";
-    $sql .= " order by id ASC ";
+    $sql .= " order by id DESC ";
     $sql .= "LIMIT 8";
     $stmt = $conn->prepare($sql);
     $stmt->execute();

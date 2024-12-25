@@ -1,15 +1,16 @@
 <?php
-function taodonhang($madh, $tongdonhang, $name, $address, $email, $tel, $pttt)
+function taodonhang($madh, $tongdonhang, $name, $address, $email, $tel, $pttt, $userid)
 {
     $conn = connectDTB(); // Kết nối database
-    $sql = "INSERT INTO `order` (madh,tongdonhang,pttt,name,address,email,tel) 
-            VALUES (:madh, :tongdonhang, :pttt, :name, :address, :email, :tel)";
+    $sql = "INSERT INTO `order` (madh,tongdonhang,pttt,iduser,name,address,email,tel) 
+            VALUES (:madh, :tongdonhang, :pttt,:iduser,:name, :address, :email, :tel)";
     $stmt = $conn->prepare($sql);
 
     // Ràng buộc tham số với giá trị
     $stmt->bindParam(':madh', $madh);
     $stmt->bindParam(':tongdonhang', $tongdonhang);
     $stmt->bindParam(':pttt', $pttt);
+    $stmt->bindParam(':iduser', $userid);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':address', $address); // Đúng tên tham số
     $stmt->bindParam(':email', $email);
@@ -40,6 +41,17 @@ function showcart($iddh)
     $sql = "SELECT * FROM cart WHERE iddh = :iddh";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':iddh', $iddh);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $kq = $stmt->fetchAll();
+    return $kq;
+}
+function getorderInfo($iddh)
+{
+    $conn = connectDTB();
+    $sql = "SELECT * FROM `order` WHERE id = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $iddh);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $kq = $stmt->fetchAll();

@@ -224,3 +224,27 @@ a:hover {
     cursor: pointer;
     background-color: #218838;
 }
+
+.info_order {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
+    ;
+    margin-bottom: 20px;
+}
+
+.info_order h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.info_order h3 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.info_order p {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}

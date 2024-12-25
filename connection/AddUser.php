@@ -32,8 +32,8 @@ function addUser($username, $password, $role = 0)
         $stmt->bindParam(':password', $password);
         $stmt->bindParam(':role', $role);
         $stmt->execute();
-
-        return true; // Trả về true nếu thêm thành công
+        $userId = $conn->lastInsertId(); // Lấy ID vừa được tạo ra
+        return $userId;
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
         return false;

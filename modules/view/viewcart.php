@@ -38,6 +38,7 @@
         <div class="cart-actions">
             <a href="../modules/index.php?act=sanpham" class="btn-action continue-shopping">Tiếp tục mua hàng</a>
             <a href="../modules/index.php?act=deleteallcart" class="btn-action clear-cart">Xóa giỏ hàng</a>
+            <a href="../modules/index.php?act=thanhtoan" class="btn-action checkout">Xem đơn hàng</a>
         </div>
 
     </div>

@@ -8,15 +8,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = trim($_POST['user']);
     $pass = trim($_POST['pass']);
     if (!empty($user) && !empty($pass)) {
-        $role = checkUser($user, $pass); // Gọi hàm kiểm tra tài khoản
-
-        if ($role !== false) {
+        $userData = checkUser($user, $pass); // Gọi hàm kiểm tra tài khoản
+        if ($userData['role'] !== false) {
             $_SESSION['user'] = $user;
-            $_SESSION['role'] = $role; // Lưu role vào session
-            if ($role == 1) { // Tài khoản admin
+            $_SESSION['role'] = $userData['role'];
+            $_SESSION['userId'] = $userData['userId']; // Lưu role vào session
+            if ($userData['role'] == 1) { // Tài khoản admin
                 header('Location: ../admin/index.php');
                 exit();
-            } elseif ($role == 0) { // Tài khoản người dùng
+            } elseif ($userData['role'] == 0) { // Tài khoản người dùng
                 echo "<script>alert('Bạn đã đăng nhập thành công!');</script>";
                 header('Location: ../modules/index.php?act=trangchu');
                 exit();
